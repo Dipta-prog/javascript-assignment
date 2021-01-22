@@ -128,15 +128,3 @@ function megaFriend(nameArray) {
 
 
 
-
-
-
-//console.log(kilometerToMeter("ghvhgv"));
-//console.log(budgetCalculator(10,12+2,5));
-//console.log(hotelCost(2.2));
-//console.log(megaFriend(["ktctc","Tamim","rdetsy","household","Anik","fyc"]));
-//console.log(megaFriend(["","","","",""]));//*************
-//console.log(megaFriend(["ghcgcvfh","fcgcghgfcc", "Anikggggg"]));
-//console.log(megaFriend());
-//console.log(megaFriend({}));
-
