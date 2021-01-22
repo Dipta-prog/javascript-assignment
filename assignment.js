@@ -9,11 +9,11 @@ function kilometerToMeter(kilometer) {
         var meter = kilometer * 1000;
         return meter;
     }
-    //if user enters negative input
+    //If user enters negative input
     else if (kilometer < 0) {
         return "Distance can't be negative.\nEnter a valid number";
     }
-    //if user enters non number type input
+    //If user enters non number type input
     else if (typeof kilometer != "number") {
         return "Only Number as input is allowed";
     }
@@ -26,19 +26,19 @@ function kilometerToMeter(kilometer) {
 
 
 function budgetCalculator(numberOfWatch, numberOfMobile, numberOfLaptop) {
-    //Incase user inputs in words
-    if(typeof numberOfWatch != "number" || typeof numberOfMobile != "number" || typeof numberOfLaptop != "number"){
+    //If user inputs in words
+    if (typeof numberOfWatch != "number" || typeof numberOfMobile != "number" || typeof numberOfLaptop != "number") {
         return "Enter only number type data"
     }
-    //Incase user inputs fraction number
-    else if((numberOfWatch && numberOfWatch%1 != 0) || (numberOfMobile && numberOfMobile%1 != 0) || (numberOfLaptop && numberOfLaptop%1 != 0)){
+    //If user inputs fraction number
+    else if ((numberOfWatch && numberOfWatch % 1 != 0) || (numberOfMobile && numberOfMobile % 1 != 0) || (numberOfLaptop && numberOfLaptop % 1 != 0)) {
         return "Enter only integer number";
     }
     else if ((numberOfWatch >= 0 && numberOfMobile >= 0 && numberOfLaptop >= 0)) {
         var total = (50 * numberOfWatch) + (100 * numberOfMobile) + (500 * numberOfLaptop);
         return total;
     }
-    //Incase user inputs negative number
+    //If user inputs negative number
     else {
         return "Number of an item can't be negative.Enter three positive numbers as input of the function";
     }
@@ -51,12 +51,12 @@ function budgetCalculator(numberOfWatch, numberOfMobile, numberOfLaptop) {
 
 
 function hotelCost(numberOfDays) {
-    //Incase user enter number of days in words
-    if(typeof numberOfDays != "number") return "enter number type data only";
-    //Incase user enter fraction number of days
-    else if (numberOfDays && numberOfDays%1 != 0) return "Please don't enter fraction number of days";
-    //Incase user enter negative number of days
-    else if(numberOfDays<0) return "Number of days can't be negative";
+    //If user enter number of days in words
+    if (typeof numberOfDays != "number") return "enter number type data only";
+    //If user enter fraction number of days
+    else if (numberOfDays && numberOfDays % 1 != 0) return "Please don't enter fraction number of days";
+    //If user enter negative number of days
+    else if (numberOfDays < 0) return "Number of days can't be negative";
     else if ((numberOfDays >= 0) && (numberOfDays <= 10)) {
         return (100 * numberOfDays);
     }
@@ -76,10 +76,10 @@ function hotelCost(numberOfDays) {
 
 
 
-
 function megaFriend(nameArray) {
     var notString = false;
     var blankElement = false;
+    var spaceBeforeName = false;
     for (var a = 0; a < nameArray.length; a++) {
         var eachElement = nameArray[a];
         if (typeof nameArray[a] != "string") {
@@ -87,6 +87,9 @@ function megaFriend(nameArray) {
         }
         if (eachElement.length == 0) {
             blankElement = true;
+        }
+        if (eachElement[0] == " ") {
+            spaceBeforeName = true;
         }
     }
     //If user enters an empty array
@@ -105,6 +108,10 @@ function megaFriend(nameArray) {
     else if (blankElement == true) {
         return "You entered blank element.Please fill the string";
     }
+    //If user enters an empty/white space before name
+    else if (spaceBeforeName == true) {
+        return "You entered space before name.Please delete the space";
+    }
     else {
         var longentName = nameArray[0];
         for (var i = 0; i < nameArray.length; i++) {
@@ -118,15 +125,18 @@ function megaFriend(nameArray) {
 
 }
 
-//console.log(kilometerToMeter(-1.2));
-//console.log(budgetCalculator(10,5,4));
-//console.log(hotelCost(11.5));
-//console.log(megaFriend(["Asrafulj","Tamimfgaaahhhhhh","gjfvjvghjvgvjhvgghvjvgghv","household","Anikgggggggggg"]));
-//console.log(megaFriend(["","", "","",""]));//*************
-//console.log(megaFriend([2, "Tamimfgaaafffffffffffff", "Anikgggggggggg"]));
+
+
+
+
+
+
+//console.log(kilometerToMeter("ghvhgv"));
+//console.log(budgetCalculator(10,12+2,5));
+//console.log(hotelCost(2.2));
+//console.log(megaFriend(["ktctc","Tamim","rdetsy","household","Anik","fyc"]));
+//console.log(megaFriend(["","","","",""]));//*************
+//console.log(megaFriend(["ghcgcvfh","fcgcghgfcc", "Anikggggg"]));
+//console.log(megaFriend());
 //console.log(megaFriend({}));
-//console.log(megaFriend([]));
-//var name = "Anik";
-//console.log(name.length);
-//const val = 10.01%1;
-//console.log( val);
+
